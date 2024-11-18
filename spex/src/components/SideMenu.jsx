@@ -1,54 +1,58 @@
-import  { useState } from 'react';
-import { Home, Settings, Info } from '@mui/icons-material';
+import { useState } from 'react';
+import { Home, Settings, Info, ExitToApp } from '@mui/icons-material';
+import './SideMenu.css'; // Import the CSS file
 
 const Sidebar = () => {
   const [isExpanded, setIsExpanded] = useState(true);
+  const [activeItem, setActiveItem] = useState('Home'); // Track the active menu item
 
   return (
-    <div
-      className={`bg-black h-screen flex flex-col justify-between transition-all duration-300 ${
-        isExpanded ? 'w-60' : 'w-20'
-      }`}
-    >
-      {/* Top Section: Logo and Menu Items */}
-      <div className="flex flex-col">
-        {/* Logo */}
-        <div className="flex items-center justify-between px-4 py-4">
-          <h1
-            className={`text-white text-xl font-bold transition-all duration-300 ${
-              isExpanded ? 'opacity-100' : 'opacity-0'
-            }`}
-          >
-            Logo
-          </h1>
-          <button
-            className="text-white"
-            onClick={() => setIsExpanded(!isExpanded)}
-          >
+    <div className={`sidebar ${isExpanded ? 'expanded' : 'collapsed'}`}>
+      {/* Top Section */}
+      <div className="top-section">
+        <div className="logo-container">
+          <h1 className={`logo ${isExpanded ? 'show' : 'hide'}`}>Logo</h1>
+          <button className="toggle-btn" onClick={() => setIsExpanded(!isExpanded)}>
             {isExpanded ? '<' : '>'}
           </button>
         </div>
 
         {/* Menu Items */}
-        <div className="flex flex-col space-y-4 mt-4 px-2">
-          <div className="flex items-center space-x-4 cursor-pointer hover:bg-gray-700 p-2 rounded-md">
-            <Home className="text-white" />
-            {isExpanded && <span className="text-white">Home</span>}
+        <div className="menu-items">
+          <div
+            className={`menu-item ${activeItem === 'Home' ? 'active' : ''}`}
+            onClick={() => setActiveItem('Home')}
+          >
+            <Home className="icon blue" />
+            {isExpanded && <span className="menu-text">Home</span>}
           </div>
-          <div className="flex items-center space-x-4 cursor-pointer hover:bg-gray-700 p-2 rounded-md">
-            <Settings className="text-white" />
-            {isExpanded && <span className="text-white">Settings</span>}
+          <div
+            className={`menu-item ${activeItem === 'Settings' ? 'active' : ''}`}
+            onClick={() => setActiveItem('Settings')}
+          >
+            <Settings className="icon green" />
+            {isExpanded && <span className="menu-text">Settings</span>}
           </div>
-          <div className="flex items-center space-x-4 cursor-pointer hover:bg-gray-700 p-2 rounded-md">
-            <Info className="text-white" />
-            {isExpanded && <span className="text-white">About</span>}
+          <div
+            className={`menu-item ${activeItem === 'About' ? 'active' : ''}`}
+            onClick={() => setActiveItem('About')}
+          >
+            <Info className="icon red" />
+            {isExpanded && <span className="menu-text">About</span>}
           </div>
         </div>
       </div>
 
       {/* Bottom Section */}
-      <div className="flex flex-col items-center pb-4">
-        <p className="text-gray-400 text-sm">{isExpanded ? '© 2024' : ''}</p>
+      <div className="bottom-section">
+        <div
+          className={`menu-item logout ${activeItem === 'Logout' ? 'active' : ''}`}
+          onClick={() => setActiveItem('Logout')}
+        >
+          <ExitToApp className="icon gray" />
+          {isExpanded && <span className="menu-text">Logout</span>}
+        </div>
+        {isExpanded && <p className="copyright">© 2024</p>}
       </div>
     </div>
   );
