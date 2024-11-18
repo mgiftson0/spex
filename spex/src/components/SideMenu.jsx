@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { Home, Settings, Info, ExitToApp } from '@mui/icons-material';
+import MenuOpenIcon from '@mui/icons-material/MenuOpen'; // Import MenuOpenIcon
 import './SideMenu.css'; // Import the CSS file
 
 const Sidebar = () => {
@@ -13,7 +14,7 @@ const Sidebar = () => {
         <div className="logo-container">
           <h1 className={`logo ${isExpanded ? 'show' : 'hide'}`}>Logo</h1>
           <button className="toggle-btn" onClick={() => setIsExpanded(!isExpanded)}>
-            {isExpanded ? '<' : '>'}
+            <MenuOpenIcon /> {/* Use MenuOpenIcon for the toggle button */}
           </button>
         </div>
 
