@@ -1,18 +1,18 @@
-import Sidebar from '../components/SideMenu';
+import Header from '../components/Header'; // Path to your Header component
+import SideMenu from '../components/SideMenu'; // Sidebar component (if applicable)
 
-const Dashboard = () => {
+const App = () => {
   return (
-    <div className="flex min-h-screen">
-      {/* Sidebar */}
-      <Sidebar />
-
-      {/* Main Content */}
-      <div className="flex-grow bg-gray-100 p-8">
-        <h1 className="text-2xl font-bold">Dashboard</h1>
-        <p>Welcome to your dashboard content area!</p>
+    <div>
+      <Header />
+      <div > {/* Space for fixed header */}
+        <SideMenu />
+        <main style={{ padding: '20px' }}> {/* Main content */}
+          <h2>Welcome to the Dashboard!</h2>
+        </main>
       </div>
     </div>
   );
 };
 
-export default Dashboard;
+export default App;
