@@ -7,6 +7,7 @@
     justify-content: space-between;
     transition: all 0.3s ease;
     border-radius: 20px;
+    margin-left: 10px;
   }
   
   .sidebar.expanded {
@@ -70,7 +71,7 @@
   
   /* Active Menu Item */
   .menu-item.active {
-    background-color: #4a4a59;
+    background-color: #b1b1fc;
   }
   
   .icon {
@@ -112,7 +113,7 @@
   }
   
   .logout:hover {
-    background-color: #555;
+    background-color: #b1b9e4;
   }
   
   /* Bottom Section */
