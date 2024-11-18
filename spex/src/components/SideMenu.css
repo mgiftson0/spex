@@ -63,6 +63,7 @@
     border-radius: 4px;
     cursor: pointer;
     transition: background 0.3s ease;
+    margin: 7px;
   }
   
   .menu-item:hover {
@@ -72,6 +73,7 @@
   /* Active Menu Item */
   .menu-item.active {
     background-color: #b1b1fc;
+    border-radius: 10px;
   }
   
   .icon {
