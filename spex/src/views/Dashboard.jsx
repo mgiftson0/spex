@@ -1,18 +1,21 @@
-import Header from '../components/Header'; // Path to your Header component
-import SideMenu from '../components/SideMenu'; // Sidebar component (if applicable)
+// import Header from '../components/Header'; 
+import RightSideCard from '../components/RightSideCard';
+import SideMenu from '../components/SideMenu'; 
+import FitnessOverviewCard from '../components/FitnessOverviewCard';
 
-const App = () => {
+const Dashboard = () => {
   return (
     <div>
-      <Header />
-      <div > {/* Space for fixed header */}
+      {/* <Header /> */}
+      <div style={{ display: 'flex', marginTop: '60px' }}> {/* Adjust margin to account for fixed header height */}
         <SideMenu />
-        <main style={{ padding: '20px' }}> {/* Main content */}
-          <h2>Welcome to the Dashboard!</h2>
-        </main>
+        <RightSideCard />
+
+        <FitnessOverviewCard />
+      
       </div>
     </div>
   );
 };
 
-export default App;
+export default Dashboard;
