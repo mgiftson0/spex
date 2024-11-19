@@ -1,0 +1,70 @@
+/* Fitness Card Container */
+.fitness-card {
+    width: 100%;
+    max-width: 400px;
+    background: #ffffff;
+    border-radius: 16px; /* Slightly increased border radius for a softer look */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Enhanced shadow for depth */
+    padding: 25px; /* Increased padding for better spacing */
+    text-align: center;
+    margin: 20px auto;
+    transition: transform 0.2s; /* Added transition for hover effect */
+}
+
+.fitness-card:hover {
+    transform: translateY(-5px); /* Subtle lift effect on hover */
+}
+
+/* Card Header */
+.fitness-card-header h2 {
+    font-size: 26px; /* Increased font size for better visibility */
+    font-weight: 600; /* Changed to semi-bold for a modern look */
+    color: #2c3e50; /* Darker color for better contrast */
+    margin-bottom: 15px; /* Reduced margin for tighter layout */
+}
+
+/* Card Content */
+.fitness-card-content {
+    display: flex;
+    flex-direction: column;
+    gap: 25px; /* Increased gap for better separation */
+}
+
+/* Fitness Item */
+.fitness-item {
+    text-align: left;
+    border-bottom: 1px solid #e0e0e0; /* Added bottom border for separation */
+    padding-bottom: 10px; /* Added padding for spacing */
+}
+
+.fitness-item:last-child {
+    border-bottom: none; /* Remove border from the last item */
+}
+
+.fitness-item h3 {
+    font-size: 20px; /* Increased font size for headings */
+    font-weight: 500; /* Changed to medium for a softer appearance */
+    color: #34495e; /* Darker color for better readability */
+}
+
+.fitness-item p {
+    font-size: 18px; /* Increased font size for better readability */
+    color: #7f8c8d; /* Softer color for less strain */
+}
+
+/* Progress Bar */
+.progress-bar {
+    width: 100%;
+    height: 12px; /* Increased height for better visibility */
+    background: #ecf0f1; /* Lighter background for contrast */
+    border-radius: 6px; /* Increased border radius for a smoother look */
+    overflow: hidden;
+    margin: 10px 0;
+}
+
+.progress {
+    height: 100%;
+    background: #27ae60; /* Changed to a more vibrant green */
+    border-radius: 6px;
+    transition: width 0.4s ease; /* Slightly longer transition for smoothness */
+}
