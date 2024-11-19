@@ -1,50 +1,39 @@
-/* Header Container */
 .header {
-    display: flex;
-    align-items: center;
-    justify-content: center; /* Align items in the center */
-    height: 60px;
-    padding: 0 10px; /* Reduced padding */
-    background: rgba(0, 0, 0, 0.5); 
-    position: fixed;
+    width: calc(100% - 300px); /* Adjust based on the sidebar width */
+    position: fixed; /* Keep it fixed at the top */
+    left: 300px; /* Align it next to the sidebar */
     top: 0;
-    left: 50%; /* Center the header */
-    transform: translateX(-50%); /* Adjust for centering */
-    z-index: 10;
-    backdrop-filter: blur(8px); 
-    width: 50%; 
-    margin-top: 50px; 
+    z-index: 10; 
+    background-color: gray;
 }
-  
 
-  
 /* Search Bar */
 .header-search {
     display: flex;
     align-items: center;
     background: rgba(255, 255, 255, 0.1);
     border-radius: 20px;
-    padding: 5px 10px; /* Reduced padding */
-    width: 100px; /* Further reduced width */
+    padding: 5px 10px; 
+    width: 100px;
     margin-right: 10px;
 }
   
 .search-icon {
-    color: black; /* Changed color to black */
-    margin-right: 10px; /* Increased margin for more space */
+    color: black; 
+    margin-right: 10px; 
 }
   
 .search-input {
     background: transparent;
     border: none;
     outline: none;
-    color: black; /* Changed color to black */
+    color: black; 
     width: 100%;
     font-size: 14px;
 }
   
 .search-input::placeholder {
-    color: rgba(0, 0, 0, 0.6); /* Changed placeholder color to a lighter black */
+    color: rgba(0, 0, 0, 0.6); 
 }
   
 /* Avatar */
