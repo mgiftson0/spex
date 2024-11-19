@@ -1,0 +1,50 @@
+/* Full Height Right Side Card */
+.right-side-card {
+    position: fixed;
+    right: 0;
+    top: 0;
+    height: 100vh; /* Full height of the viewport */
+    width: 300px; /* Fixed width */
+    background: rgba(255, 255, 255, 0.9);
+    /* border-left: 2px solid rgba(0, 0, 0, 0.1);  */
+    padding: 20px;
+    /* box-shadow: -2px 0 6px rgba(0, 0, 0, 0.1);  */
+    z-index: 10;
+    overflow-y: auto; /* Scrollable content if height overflows */
+  }
+  
+  /* Card Content */
+  .card-content {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .card-title {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  .card-description {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 20px;
+  }
+  
+  .card-button {
+    padding: 10px 20px;
+    font-size: 14px;
+    font-weight: bold;
+    color: white;
+    background-color: #5c5cff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .card-button:hover {
+    background-color: #4b4bff;
+  }
+  
